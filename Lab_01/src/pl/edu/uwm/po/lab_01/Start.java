@@ -9,7 +9,10 @@ public class Start {
         //z04();
         //z05();
         //z06();
-        z09();
+        //z09();
+        //z10();
+        //z11();
+        z12();
     }
     static int z01 () {
         return 31 + 29 + 31;
@@ -75,5 +78,42 @@ public class Start {
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  . ((((((((((((((((((((  @@@@@@@@@@@@@@@@@@@");
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&*     ...    *@@@@@@@@@@@@@@@@@@@@@@@@");
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+    }
+    static void z10 () {
+        System.out.println("No.1. Sweeney Todd: The Demon Barber from Fleet Street");
+        System.out.println("No.2. Imaginaerum");
+        System.out.println("No.3. Skyfall");
+    }
+    static void z11 () {
+        System.out.print("Wywód Jestem’u\n" +
+                "Miron Białoszewski\n"+
+                "\n" +
+                "jestem sobie\n" +
+                "jestem głupi\n" +
+                "co mam robić\n" +
+                "jak nie wiedzieć\n" +
+                "a co ja wiem\n" +
+                "co ja wiem\n" +
+                "co ja jestem\n" +
+                "wiem, że jestem\n" +
+                "taki jak jestem\n" +
+                "może nieglupi\n" +
+                "ale to może tylko dlatego że wiem\n" +
+                "że każdy dla siebie jest najważniejszy\n" +
+                "bo jak się na siebie nie godzi\n" +
+                "to i tak taki jest się jaki jest");
+    }
+    static void z12() {
+        System.out.println("* * * * * * =====================================");
+        System.out.println(" * * * * *");
+        System.out.println("* * * * * * =====================================");
+        System.out.println(" * * * * *");
+        System.out.println("* * * * * * =====================================");
+        System.out.println("");
+        System.out.println("=================================================");
+        System.out.println("");
+        System.out.println("=================================================");
+        System.out.println("");
+        System.out.println("=================================================");
     }
 }
