@@ -12,6 +12,7 @@ public class Start {
         }
     }
     public void z01a(int n){
+        this.wynik=0;
         for (int i=0; i<n;i++){
             this.wynik+=Double.parseDouble(klawiatura.nextLine());
         }
@@ -23,11 +24,13 @@ public class Start {
         }
     }
     public void z01c(int n){
+        this.wynik=0;
         for (int i=0; i<n;i++){
             this.wynik+=Math.abs(Double.parseDouble(klawiatura.nextLine()));
         }
     }
     public void z01d(int n){
+        this.wynik=0;
         for (int i=0; i<n;i++){
             this.wynik+=Math.sqrt(Math.abs(Double.parseDouble(klawiatura.nextLine())));
         }
@@ -39,12 +42,15 @@ public class Start {
         }
     }
     public void z01f(int n){
+        this.wynik=0;
         for (int i=0; i<n;i++){
             double a=Double.parseDouble(klawiatura.nextLine());
             this.wynik+=Math.pow(a,2);
         }
     }
     public void z01g(int n){
+        this.wynik=0;
+        this.wynik2=1;
         for (int i=0; i<n;i++){
             double a=Double.parseDouble(klawiatura.nextLine());
             this.wynik+=a;
@@ -52,12 +58,14 @@ public class Start {
         }
     }
     public void z01h(int n){
+        this.wynik=0;
         for (int i=1; i<=n;i++){
             double a=Double.parseDouble(klawiatura.nextLine());
             this.wynik+=Math.pow(-1,i+1)*a;
         }
     }
     public void z01i(int n){
+        this.wynik=0;
         int wyk=1;
         for (int i=0; i<n;i++){
             double a=Double.parseDouble(klawiatura.nextLine());
