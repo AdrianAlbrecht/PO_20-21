@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class StartTest {
     public static void main(String[] args) {
         Scanner klawiatura = new Scanner(System.in);
+        Start z1 = new Start();
         z1.z01a(Integer.parseInt(klawiatura.nextLine()));
         z1.wypisz(false);
         z1.z01b(Integer.parseInt(klawiatura.nextLine()));
