@@ -128,5 +128,27 @@ public class Lab03_TEST {
                 "\nIle najwięcej dodatnich po kolei: "+Zad2.dlugoscMaksymalnegoCiaguDodatnich(liczby2));
         Zad2.odwrocFragment(liczby2,lewy,prawy);
         Zad2.signum(liczby2);
+
+
+        //Zadanie 3:
+        int m;
+        int k;
+        while(true){
+            m=klawiatura.nextInt();
+            if((m>=1)&&(m<=10)) break;
+            else System.out.println("Liczba musi znajdować się w przedziale [1;10]!!!!!");
+        }
+        while(true){
+            n=klawiatura.nextInt();
+            if((n>=1)&&(n<=10)) break;
+            else System.out.println("Liczba musi znajdować się w przedziale [1;10]!!!!!");
+        }
+        while(true){
+            k=klawiatura.nextInt();
+            if((k>=1)&&(k<=10)) break;
+            else System.out.println("Liczba musi znajdować się w przedziale [1;10]!!!!!");
+        }
+        Zad3 z3= new Zad3(m,n,k);
+        z3.wypisz();
     }
 }
