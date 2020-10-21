@@ -21,8 +21,8 @@ public class Lab_04TEST {
         System.out.println("The change of 'AaBbccCcDXd' is: "+Lab_04.change("AaBbccCcDXd"));
         System.out.println("Number '12123123123' with ' is: "+Lab_04.nice("12123123123"));
         System.out.println("Number '123123123123' with ' is: "+Lab_04.nice("123123123123"));
-        System.out.println("Number '12123123123' with 4 sep ' is: "+Lab_04.nice("12123123123",4));
-        System.out.println("Number '123123123123' with 4 sep ' is: "+Lab_04.nice("123123123123",4));
+        System.out.println("Number '12123123123' with 4 sep ' is: "+Lab_04.nice("12123123123",'*',4));
+        System.out.println("Number '123123123123' with 4 sep ' is: "+Lab_04.nice("123123123123",'*',4));
 
         //Zad2
         System.out.println("\nZadanie2:");

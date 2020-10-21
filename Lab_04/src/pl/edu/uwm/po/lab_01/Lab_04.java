@@ -72,12 +72,12 @@ public class Lab_04 {
         }
         return dziesietne.toString();
     }
-    public static String nice(String str, int n){
+    public static String nice(String str,char znak, int n){
         StringBuffer dziesietne= new StringBuffer();
         int it=1;
         for(int i=(str.length()-1);i>=0;i--){
             dziesietne.append(str.charAt(i));
-            if(it%n==0 && i!=0)  dziesietne.append("'");
+            if(it%n==0 && i!=0)  dziesietne.append(znak);
             it++;
         }
         String temp= dziesietne.toString();
