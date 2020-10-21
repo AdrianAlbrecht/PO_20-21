@@ -3,18 +3,17 @@ import java.util.ArrayList;
 
 public class Lab_05 {
     public static ArrayList<Integer> append(ArrayList<Integer> a, ArrayList<Integer> b){
-        ArrayList<Integer> rozszerzonaLista= new ArrayList<Integer>();
+        ArrayList<Integer> rozszerzonaLista= new ArrayList<>();
         rozszerzonaLista.addAll(a);
         rozszerzonaLista.addAll(b);
         return rozszerzonaLista;
     }
     public static ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b){
-        int dlugosc_a= a.toArray().length;
-        int dlugosc_b= b.toArray().length;
-        ArrayList<Integer> nowy= new ArrayList<Integer>();
+        int dlugosc_a= a.size();
+        int dlugosc_b= b.size();
+        ArrayList<Integer> nowy= new ArrayList<>();
         int i=0;
-        int j=0;
-        j = Math.min(dlugosc_a, dlugosc_b);
+        int j = Math.min(dlugosc_a, dlugosc_b);
         for(int k=0;k<j;k++){
             nowy.add(a.get(i));
             nowy.add(b.get(i));
@@ -33,9 +32,9 @@ public class Lab_05 {
         return nowy;
     }
     public static ArrayList<Integer> mergeSorted(ArrayList<Integer> a, ArrayList<Integer> b){
-        int dlugosc_a= a.toArray().length;
-        int dlugosc_b= b.toArray().length;
-        ArrayList<Integer> nowy= new ArrayList<Integer>();
+        int dlugosc_a= a.size();
+        int dlugosc_b= b.size();
+        ArrayList<Integer> nowy= new ArrayList<>();
         int ind_a=0;
         int ind_b=0;
         for(int i=0;i<dlugosc_a+dlugosc_b;i++){
@@ -61,18 +60,16 @@ public class Lab_05 {
         return nowy;
     }
     public static ArrayList<Integer> reversed(ArrayList<Integer> a){
-        ArrayList<Integer> nowy= new ArrayList<Integer>();
-        int dlugosc_a= a.toArray().length;
-        for(int i=dlugosc_a-1;i>=0;i--) {
+        ArrayList<Integer> nowy= new ArrayList<>();
+        for(int i=a.size()-1;i>=0;i--) {
             nowy.add(a.get(i));
         }
         return nowy;
     }
     public static void reverse(ArrayList<Integer> a){
-        ArrayList<Integer> temp= new ArrayList<Integer>(a);
-        int dlugosc= temp.toArray().length;
+        ArrayList<Integer> temp= new ArrayList<>(a);
         int j=0;
-        for(int i=dlugosc-1;i>=0;i--) {
+        for(int i=temp.size()-1;i>=0;i--) {
             a.set(j,temp.get(i));
             j++;
         }
