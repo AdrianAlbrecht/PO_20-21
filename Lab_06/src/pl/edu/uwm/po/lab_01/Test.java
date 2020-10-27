@@ -1,5 +1,7 @@
 package pl.edu.uwm.po.lab_01;
 
+import java.time.LocalDate;
+
 public class Test {
     public static void main(String[] args) {
         //Zadanie 1
@@ -36,7 +38,25 @@ public class Test {
         System.out.println(zbiorA.equals(zbiorC));
 
         //Zadanie 3
+        Pracownik[] personel = new Pracownik[3];
 
-        //TO DO !!!!!!!!!!!!!!!!!!!!!!!!!
+                // wypełnij tablicę danymi pracowników
+        personel[0] = new Pracownik("Karol Cracker", 75000, 2001, 12, 15);
+        personel[1] = new Pracownik("Henryk Hacker", 50000, 2003, 10, 1);
+        personel[2] = new Pracownik("Antoni Tester", 40000, 2005, 3, 15);
+
+                // zwiększ pobory każdego pracownika o 20%
+        for (Pracownik e : personel) {
+            e.zwiekszPobory(20);
+        }
+
+                // wypisz informacje o każdym pracowniku
+        for (Pracownik e : personel) {
+            System.out.print("nazwisko = " + e.nazwisko() + "\tpobory = " + e.pobory());
+            System.out.printf("\tdataZatrudnienia = %tF\n", e.dataZatrudnienia());
+        }
+        System.out.println();
+
     }
+
 }
