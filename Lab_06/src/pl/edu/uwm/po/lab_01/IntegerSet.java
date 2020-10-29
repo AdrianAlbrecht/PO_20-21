@@ -25,6 +25,7 @@ public class IntegerSet {
     public void deleteElement(int i){
         this.zbior[i-1]=false;
     }
+    @Override
     public String toString(){
         StringBuilder liczby= new StringBuilder();
         for(int i=0;i<100;i++){
