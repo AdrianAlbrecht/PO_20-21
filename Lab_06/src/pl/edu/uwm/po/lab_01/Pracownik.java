@@ -12,7 +12,7 @@ public class Pracownik {
         // klasa GregorianCalendar numeruje miesiące począwszy od 0
         GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
 
-        this.dataZatrudnienia = LocalDate.now();
+        this.dataZatrudnienia = LocalDate.of(year,month,day);
         // dataZatrudnienia = new Date(year, month, day);
         // Powyższy konstruktor jest metodą odradzaną (ang. deprecated)
     }
