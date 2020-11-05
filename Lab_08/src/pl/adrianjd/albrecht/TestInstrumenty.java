@@ -17,5 +17,7 @@ public class TestInstrumenty {
         }
         System.out.println(orkiestra.get(0).equals(orkiestra.get(4)));
         System.out.println(orkiestra.get(1).equals(orkiestra.get(2)));
+        System.out.println(orkiestra.get(3).getProducent());
+        System.out.println(orkiestra.get(3).getRokProdukcji());
     }
 }
