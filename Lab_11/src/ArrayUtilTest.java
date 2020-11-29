@@ -9,7 +9,7 @@ public class ArrayUtilTest {
         lD.add(LocalDate.of(1999,7,2));
         lD.add(LocalDate.of(1999,8,1));
         System.out.println(ArrayUtil.isSorted(lD));
-        lD.sort(Collections.reverseOrder());
+        Collections.sort(lD);
         System.out.println(ArrayUtil.isSorted(lD));
         ArrayList<Integer> i = new ArrayList<>();
         i.add(4);
@@ -22,7 +22,7 @@ public class ArrayUtilTest {
         i.add(8);
         i.add(5);
         System.out.println(ArrayUtil.isSorted(i));
-        i.sort(Collections.reverseOrder());
+        Collections.sort(i);
         System.out.println(ArrayUtil.isSorted(i)+"\n");
         System.out.println(ArrayUtil.binSearch(i,8));
         System.out.println(ArrayUtil.binSearch(i,10));

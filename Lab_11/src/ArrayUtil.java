@@ -4,13 +4,21 @@ import java.util.Collections;
 public class ArrayUtil {
     public static <T extends Comparable<? super T>> boolean isSorted(ArrayList<T> tab){
         ArrayList<T> temp= new ArrayList<>(tab);
-        temp.sort(Collections.reverseOrder());
+        Collections.sort(temp);
         return tab.equals(temp);
     }
     public static <T extends Comparable<? super T>> int binSearch(ArrayList<T> tab, T a){
-        for(int i=0;i<tab.size();i++){
-            if(a.equals(tab.get(i))){
-                return i;
+        if(ArrayUtil.isSorted(tab)){
+            int l = 0;
+            int r = tab.size() - 1;
+            while (l <= r) {
+                int m = l + (r - l) / 2;
+                if (tab.get(m).equals(a))
+                    return m;
+                if (tab.get(m).compareTo(a)<0)
+                    l = m + 1;
+                else
+                    r = m - 1;
             }
         }
         return -1;
