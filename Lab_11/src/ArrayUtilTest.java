@@ -28,8 +28,8 @@ public class ArrayUtilTest {
         System.out.println(ArrayUtil.binSearch(i,5));
         System.out.println(ArrayUtil.binSearch(lD,LocalDate.of(1999,8,1)));
         System.out.println(ArrayUtil.binSearch(lD,LocalDate.of(1999,1,2))+"\n");
-        //ArrayUtil.selectionSort(lD);
-        //ArrayUtil.selectionSort(i);
+        ArrayUtil.selectionSort(lD);
+        ArrayUtil.selectionSort(i);
         ArrayUtil.mergeSort(lD);
         ArrayUtil.mergeSort(i);
         System.out.println(lD);

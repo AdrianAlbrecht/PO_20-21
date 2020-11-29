@@ -13,7 +13,7 @@ public class Pair<T> {
     }
 
     public void swap(){
-        T temp = (T) this.first;
+        T temp = this.first;
         this.first=this.second;
         this.second=temp;
     }

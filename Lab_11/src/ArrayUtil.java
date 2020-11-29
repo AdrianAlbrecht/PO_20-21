@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -6,10 +5,7 @@ public class ArrayUtil {
     public static <T extends Comparable<? super T>> boolean isSorted(ArrayList<T> tab){
         ArrayList<T> temp= new ArrayList<>(tab);
         tab.sort(Collections.reverseOrder());
-        if(tab.equals(temp)){
-            return true;
-        }
-        return false;
+        return tab.equals(temp);
     }
     public static <T extends Comparable<? super T>> int binSearch(ArrayList<T> tab, T a){
         for(int i=0;i<tab.size();i++){
