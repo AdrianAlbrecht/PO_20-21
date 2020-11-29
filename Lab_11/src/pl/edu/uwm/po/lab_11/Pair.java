@@ -1,3 +1,5 @@
+package pl.edu.uwm.po.lab_11;
+
 public class Pair<T> {
     private T first;
     private T second;

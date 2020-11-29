@@ -1,3 +1,5 @@
+package pl.edu.uwm.po.lab_11;
+
 public class PairDemo {
 
     public static void main(String[] args)
