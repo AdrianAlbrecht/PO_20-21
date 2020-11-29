@@ -25,7 +25,7 @@ public class ArrayUtilTest {
         i.sort(Collections.reverseOrder());
         System.out.println(ArrayUtil.isSorted(i)+"\n");
         System.out.println(ArrayUtil.binSearch(i,8));
-        System.out.println(ArrayUtil.binSearch(i,5));
+        System.out.println(ArrayUtil.binSearch(i,10));
         System.out.println(ArrayUtil.binSearch(lD,LocalDate.of(1999,8,1)));
         System.out.println(ArrayUtil.binSearch(lD,LocalDate.of(1999,1,2))+"\n");
         ArrayUtil.selectionSort(lD);

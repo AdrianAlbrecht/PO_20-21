@@ -4,7 +4,7 @@ import java.util.Collections;
 public class ArrayUtil {
     public static <T extends Comparable<? super T>> boolean isSorted(ArrayList<T> tab){
         ArrayList<T> temp= new ArrayList<>(tab);
-        tab.sort(Collections.reverseOrder());
+        temp.sort(Collections.reverseOrder());
         return tab.equals(temp);
     }
     public static <T extends Comparable<? super T>> int binSearch(ArrayList<T> tab, T a){
