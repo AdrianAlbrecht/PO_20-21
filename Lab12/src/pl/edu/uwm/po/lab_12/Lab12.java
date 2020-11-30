@@ -74,14 +74,16 @@ public class Lab12 {
         for(int x: primes){
             System.out.print(x+" ");
         }
+        System.out.println();
     }
     public static <T extends Iterable<?>> void print(T object ){
         Iterator<?> it= object.iterator();
         while (it.hasNext()){
-            System.out.println(it.next());
+            System.out.print(it.next());
             if (it.hasNext()){
-                System.out.println(", ");
+                System.out.print(", ");
             }
         }
+        System.out.println();
     }
 }
