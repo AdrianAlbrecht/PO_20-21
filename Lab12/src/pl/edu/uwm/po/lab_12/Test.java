@@ -1,7 +1,6 @@
 package pl.edu.uwm.po.lab_12;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 
@@ -47,8 +46,8 @@ public class Test {
         daty.add(LocalDate.of(1999,12,1));
         daty.add(LocalDate.of(1999,11,12));
         daty.add(LocalDate.of(1999,9,23));
-        /*Lab12.print(liczby);
+        Lab12.print(liczby);
         Lab12.print(pracoownicy);
-        Lab12.print(daty);*/
+        Lab12.print(daty);
     }
 }

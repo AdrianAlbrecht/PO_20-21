@@ -75,7 +75,7 @@ public class Lab12 {
             System.out.print(x+" ");
         }
     }
-    /*public static <T extends Iterable<T>> void print(T object ){
+    public static <T extends Iterable<?>> void print(T object ){
         Iterator<?> it= object.iterator();
         while (it.hasNext()){
             System.out.println(it.next());
@@ -83,5 +83,5 @@ public class Lab12 {
                 System.out.println(", ");
             }
         }
-    }*/
+    }
 }
