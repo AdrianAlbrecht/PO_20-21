@@ -1,14 +1,14 @@
 package pl.edu.uwm.po.RPG;
 
 public class Mikstury extends Items{
-    public Mikstury(String name, int hp, int pkt_ochrona_przed_magia, int zwinnosc, int pkt_ataku, boolean czy_uzytkowy, boolean czy_healujace) {
-        super(name, hp, 0, 0, pkt_ochrona_przed_magia, zwinnosc, pkt_ataku, false, czy_uzytkowy, 1);
-        this.czy_healujace = czy_healujace;
+    public Mikstury(String name, int hp, int pkt_ochrona_przed_magia, int zwinnosc, int pkt_ataku) {
+        super(name, hp, 0, 0, pkt_ochrona_przed_magia, zwinnosc, pkt_ataku, false, true, 1);
     }
-    
-    //TODO: method Use()
-    //TODO: getters
 
-    private boolean czy_healujace;
+    @Override
+    protected Object clone(){
+        return new Mikstury(this.getName(),this.getHp(),this.getPkt_ochrona_przed_magia(),this.getZwinnosc(),this.getPkt_ataku());
+    }
+
     private boolean czy_staly;
 }

@@ -23,8 +23,15 @@ public class Bron extends Items{
     public boolean isJednoreczna(){
         return this.rodzaj.dwureczny;
     }
-    
-    //TODO: getters
+
+    @Override
+    protected Object clone(){
+        return new Bron(this.getName(),this.getPoziom(),this.getPkt_ataku(),this.getWaga(),this.getRodzaj());
+    }
+
+    public Rodzaj_broni getRodzaj() {
+        return rodzaj;
+    }
 
     private Rodzaj_broni rodzaj;
 }

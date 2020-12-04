@@ -1,6 +1,6 @@
 package pl.edu.uwm.po.RPG;
 
-public abstract class Items { //TODO: implements Clonenable
+public abstract class Items implements Cloneable {
     public Items(String name, int hp, int poziom, int pancerz, int pkt_ochrona_przed_magia, int zwinnosc, int pkt_ataku, boolean czy_aktywny, boolean czy_uzytkowy, int waga) {
         this.name = name;
         this.hp = hp;
@@ -32,6 +32,30 @@ public abstract class Items { //TODO: implements Clonenable
 
     public void setCzy_aktywny(boolean czy_aktywny) {
         this.czy_aktywny = czy_aktywny;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getPoziom() {
+        return poziom;
+    }
+
+    public int getPancerz() {
+        return pancerz;
+    }
+
+    public int getPkt_ochrona_przed_magia() {
+        return pkt_ochrona_przed_magia;
+    }
+
+    public int getZwinnosc() {
+        return zwinnosc;
+    }
+
+    public int getPkt_ataku() {
+        return pkt_ataku;
     }
 
     private String name;

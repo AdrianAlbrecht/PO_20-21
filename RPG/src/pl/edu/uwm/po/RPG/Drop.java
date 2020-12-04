@@ -16,9 +16,17 @@ public class Drop{
             max+=x;
         }
         for(int i=0;i<rzeczy.size();i++){
-            zestawienie.put(rzeczy.get(i).getName(),szansa_na_drop.get(i)/max);
+            zestawienie.put(rzeczy.get(i).getName(),(double)Math.round(((szansa_na_drop.get(i)/max)*10000))/10000);
         }
         return zestawienie;
+    }
+
+    public ArrayList<Items> getRzeczy() {
+        return rzeczy;
+    }
+
+    public ArrayList<Integer> getSzansa_na_drop() {
+        return szansa_na_drop;
     }
 
     private ArrayList<Items> rzeczy;

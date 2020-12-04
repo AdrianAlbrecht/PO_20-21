@@ -19,7 +19,14 @@ public class Pancerz extends Items{
         this.rodzaj = rodzaj;
     }
 
-    //TODO: getters
+    public Rodzaj_pancerza getRodzaj() {
+        return rodzaj;
+    }
+
+    @Override
+    protected Object clone(){
+        return new Pancerz(this.getName(),this.getHp(),this.getPoziom(),this.getPancerz(),this.getPkt_ochrona_przed_magia(),this.getZwinnosc(),this.getWaga(),this.klasa,this.getRodzaj());
+    }
 
     private Klasa_pancerza klasa;
     private Rodzaj_pancerza rodzaj;

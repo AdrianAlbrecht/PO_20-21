@@ -23,7 +23,7 @@ public abstract class Istota {
         this.rasa = rasa;
     }
 
-    public void setAktualne_hp(int aktualne_hp) {
+    public void setAktualne_hp(double aktualne_hp) {
         this.aktualne_hp = aktualne_hp;
     }
 
@@ -66,7 +66,7 @@ public abstract class Istota {
         return rasa;
     }
 
-    public int getAktualne_hp() {
+    public double getAktualne_hp() {
         return aktualne_hp;
     }
 
@@ -110,7 +110,7 @@ public abstract class Istota {
 
     private String name;
     private Rasa_istoty rasa;
-    private int aktualne_hp;
+    private double aktualne_hp;
     private int max_hp;
     private int poziom;
     private int pancerz;

@@ -82,7 +82,7 @@ public class Ally extends Istota{
 
     @Override
     public void statystyki(){
-        System.out.println("============================================================================================");
+        System.out.println("====================================Statystyki gracza=====================================");
         System.out.println("Nazwa: "+this.getName());
         System.out.println("Rasa: "+this.getRasa());
         System.out.print("Druzyna: ");
@@ -99,14 +99,37 @@ public class Ally extends Istota{
         System.out.println("Sila: "+this.getSila());
         System.out.println("Zwinnośc: "+this.getZwinnosc());
         System.out.println("Szybkość: "+this.getSzybkosc());
-        System.out.println("Ewpipunek: "+this.ekwipunek.zawartosc());
+        System.out.println("Ewpipunek: "+this.ekwipunek.zawartosc(this));
     }
 
     public <T extends Items> void dodaj_do_ekwipunku(T rzecz){
         this.ekwipunek.dodaj(rzecz);
     }
-    
-    //TODO: method remove_from_eq(T rzecz)
+    public <T extends Items> void remove_from_eq(T rzecz){ this.ekwipunek.remove(rzecz);}
+
+    public <T extends Items> void aktywuj_ekwipunek(T rzecz){
+        if(this.getPoziom()>=rzecz.getPoziom()){
+            this.ekwipunek.aktywuj(rzecz, this);
+        }
+        else
+            System.out.println("Poziom wyposażenia za wysoki!");
+    }
+
+    public <T extends Items> void dezaktywuj_ekwipunek(T rzecz){
+        if(rzecz.isCzy_aktywny()){
+            this.ekwipunek.dezaktywuj(rzecz, this);
+        }
+    }
+
+    public void healuj(int wartosc){
+        this.setAktualne_hp(this.getAktualne_hp()+wartosc);
+        if(this.getAktualne_hp()>this.getMax_hp())
+            this.setAktualne_hp(this.getMax_hp());
+    }
+
+    public Ekwipunek getEkwipunek() {
+        return ekwipunek;
+    }
 
     private Team<Ally> druzyna;
     private Ekwipunek ekwipunek;
