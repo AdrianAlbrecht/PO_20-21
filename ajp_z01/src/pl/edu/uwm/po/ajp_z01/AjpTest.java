@@ -4,6 +4,7 @@ package pl.edu.uwm.po.ajp_z01;
 import javax.imageio.stream.FileCacheImageOutputStream;
 import javax.imageio.stream.ImageOutputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -27,8 +28,10 @@ public class AjpTest {
         ImageOutputStream imi = new FileCacheImageOutputStream(new ByteArrayOutputStream(), null);
         System.out.println(imi.getClass().getSuperclass());
         //Z4:
-        /*int[] tak= IntSequence.of(1,2,3,4);
-        System.out.println();*/
+        int[] tak= IntSequence.of(1,2,3,4);
+        for(int i:tak){
+            System.out.println(i);
+        }
         //Z5:
         System.out.println(Stream.iterate(1,x->x).limit(10).collect(Collectors.toList())); //Tylko teraz to w klasie, ale czy ta klasa nie musi implementowac IntSequence jako interfejsu funkcyjnego?
         //Z6:
@@ -52,20 +55,17 @@ public class AjpTest {
         System.out.println();
         runInOrder(tabik[0],tabik[1]);
         System.out.println();
+        //Z10:
+        List<String> nazwy = podkatalogi("C:\\Users\\adria\\Desktop\\Bzdety");
+        nazwy.forEach(System.out::println);
+        //Z11:
+        String[] nazwy_plikow = pliki_z_rozszerzeniem("C:\\Users\\adria\\Desktop\\Bzdety","mp3");
+        for( String n: nazwy_plikow){
+            System.out.println(n);
+        }
     }
 
-   /* public static IntSequence of(int... integers){
-        return new IntSequence(){
-            private int[] in;
-
-            @Override
-            int[] of(int... integers) {
-                this.in= Arrays.stream(integers).toArray();
-            }
-        };
-    }*/
-
-    static void luckySort(ArrayList<String> strings, Comparator<String> comp){
+    public static void luckySort(ArrayList<String> strings, Comparator<String> comp){
         ArrayList<String> posortowane = new ArrayList<>(strings);
         posortowane.sort(comp);
         while (!posortowane.equals(strings)){
@@ -78,5 +78,17 @@ public class AjpTest {
     }
     public static void runInOrder(Runnable... tasks){
         Arrays.stream(tasks).forEach(Runnable::run);
+    }
+
+    public static List<String> podkatalogi(String path){
+        File kat_glowny= new File(path);
+        File[] katalogi = kat_glowny.listFiles(File::isDirectory); // zamiast File::isDirectory może być x->x.isDirectory() jako wyrażenie lamda, ale jak z klasą anonimową????
+        assert katalogi != null;
+        return Arrays.stream(katalogi).map(File::getName).collect(Collectors.toList());
+    }
+
+    public static String[] pliki_z_rozszerzeniem(String path,String koncowka){
+        File kat_glowny= new File(path);
+        return  kat_glowny.list((x,y)->y.endsWith(koncowka));
     }
 }
