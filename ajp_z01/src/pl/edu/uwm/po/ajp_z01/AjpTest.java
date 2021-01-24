@@ -33,7 +33,10 @@ public class AjpTest {
             System.out.println(i);
         }
         //Z5:
-        System.out.println(Stream.iterate(1,x->x).limit(10).collect(Collectors.toList())); //Tylko teraz to w klasie, ale czy ta klasa nie musi implementowac IntSequence jako interfejsu funkcyjnego?
+        Stream<Integer> ciag = IntSequence.constant(1);
+        for(int i: ciag.limit(10).collect(Collectors.toList())){ //limit 10 bo jest nieskonczony
+            System.out.println(i);
+        }
         //Z6:
         //
         //Z7:
