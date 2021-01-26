@@ -1,17 +1,27 @@
 package pl.edu.uwm.po.ajp_z01;
 
-import javax.sound.midi.Sequence;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
 public interface IntSequence {
-    static int[] of(int... integers) {
-        return Arrays.stream(integers).toArray();
+    static IntSequence of(int... integers) {
+        return new IntSequence() {
+            @Override
+            public boolean hasNext() {
+                return this.wsk<ciag.length;
+            }
+            @Override
+            public int next() {
+                return this.ciag[wsk++];
+            }
+            private final int[] ciag= Arrays.stream(integers).toArray();
+            private int wsk=0;
+        };
     }
     static Stream<Integer> constant(int stala){
-        return Stream.iterate(1,x->x); //Tylko teraz to w klasie, ale czy ta klasa nie musi implementowac IntSequence jako interfejsu funkcyjnego?
+        return Stream.iterate(stala,x->x); //Może być sama lambda, ale trzeba zmienić typ zwracany :)
     }
+
+    boolean hasNext();
+    int next();
 }

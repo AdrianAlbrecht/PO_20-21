@@ -5,6 +5,7 @@ import javax.imageio.stream.FileCacheImageOutputStream;
 import javax.imageio.stream.ImageOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -28,9 +29,9 @@ public class AjpTest {
         ImageOutputStream imi = new FileCacheImageOutputStream(new ByteArrayOutputStream(), null);
         System.out.println(imi.getClass().getSuperclass());
         //Z4:
-        int[] tak= IntSequence.of(1,2,3,4);
-        for(int i:tak){
-            System.out.println(i);
+        IntSequence tak= IntSequence.of(1,2,3,4);
+        while(tak.hasNext()){
+            System.out.println(tak.next());
         }
         //Z5:
         Stream<Integer> ciag = IntSequence.constant(1);
@@ -85,7 +86,13 @@ public class AjpTest {
 
     public static List<String> podkatalogi(String path){
         File kat_glowny= new File(path);
-        File[] katalogi = kat_glowny.listFiles(File::isDirectory); // zamiast File::isDirectory może być x->x.isDirectory() jako wyrażenie lamda, ale jak z klasą anonimową????
+        //File[] katalogi = kat_glowny.listFiles(File::isDirectory); // zamiast File::isDirectory może być x->x.isDirectory() jako wyrażenie lamda, ale jak z klasą anonimową????
+        File[] katalogi = kat_glowny.listFiles(new FileFilter() {
+            @Override
+            public boolean accept(File pathname) {
+                return pathname.isDirectory();
+            }
+        });
         assert katalogi != null;
         return Arrays.stream(katalogi).map(File::getName).collect(Collectors.toList());
     }
